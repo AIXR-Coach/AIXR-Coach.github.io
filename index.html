@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIXR-Coach | Adaptive Industrial Training</title>
+    <title>AIXR-Coach: Adaptive XR Training</title>
     
-    <!-- Icons -->
+    <!-- This line imports the icons for the buttons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
@@ -15,91 +15,51 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
             color: #24292e;
             line-height: 1.6;
-            background-color: #fcfcfc;
         }
 
         /* --- Header Styling --- */
         .project-header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(to bottom, #ffffff, #f6f8fa);
-            border-bottom: 1px solid #e1e4e8;
+            margin: 40px auto;
         }
-        .project-header h1 { font-size: 2.8em; font-weight: 700; margin-bottom: 10px; line-height: 1.2; color: #0366d6; }
-        .project-header h2 { font-size: 1.5em; font-weight: 400; color: #586069; margin-top: 0; border: none; }
-        
-        .project-header .authors { font-size: 1.2em; line-height: 1.6; margin-top: 20px; }
-        .project-header .authors span { color: #24292e; font-weight: 600; margin: 0 8px; }
-        
-        .project-header .links { margin-top: 30px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .project-header .button { display: inline-block; padding: 12px 24px; background-color: #24292e; color: white; font-size: 1em; font-weight: 600; text-decoration: none; border-radius: 6px; transition: background-color 0.2s ease-in-out; }
-        .project-header .button:hover { background-color: #0366d6; }
+        .project-header h1 { font-size: 2.4em; font-weight: 600; margin-bottom: 20px; line-height: 1.2; }
+        .project-header .authors { font-size: 1.1em; line-height: 1.6; margin-bottom: 10px; }
+        .project-header .authors a { color: #0366d6; text-decoration: none; font-weight: 500; }
+        .project-header .authors a:hover { text-decoration: underline; }
+        .project-header .notes, .project-header .affiliations { font-size: 0.9em; color: #586069; margin-bottom: 15px; }
+        .project-header .conference { font-size: 1.1em; font-weight: 600; margin-top: 20px; margin-bottom: 20px; display: flex; justify-content: center; align-items: center; gap: 15px; }
+        .project-header .conference img { height: 70px; } 
+        .project-header .links { margin-top: 20px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .project-header .button { display: inline-block; padding: 12px 24px; background-color: #24292e; color: white; font-size: 1em; font-weight: 600; text-decoration: none; border-radius: 30px; transition: background-color 0.2s ease-in-out; }
+        .project-header .button:hover { background-color: #4a525a; }
         .project-header .button i { margin-right: 8px; }
+        .project-header .colab-badge { vertical-align: middle; } /* Keeping this style just in case, but badge is removed */
 
         /* --- Main Content Styling --- */
         main {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
         section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
-        h2 {
+        h2, h3 {
             font-weight: 600;
             border-bottom: 1px solid #e1e4e8;
             padding-bottom: 10px;
             margin-top: 40px;
-            margin-bottom: 25px;
-            font-size: 2em;
-            color: #24292e;
+            margin-bottom: 20px;
         }
-        h3 {
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            color: #0366d6;
-        }
-        h4 {
-            margin-bottom: 5px;
-            font-size: 1.1em;
-        }
+        h2 { font-size: 2em; }
+        h3 { font-size: 1.5em; }
         hr { border: 0; height: 1px; background-color: #e1e4e8; margin: 50px 0; }
-        
         ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        li { margin-bottom: 10px; }
+        .intro-text { text-align: center; font-size: 1.2em; margin-bottom: 30px; max-width: 900px; margin-left: auto; margin-right: auto; }
         
-        .intro-text { 
-            text-align: center; 
-            font-size: 1.3em; 
-            margin-bottom: 40px; 
-            max-width: 900px; 
-            margin-left: auto; 
-            margin-right: auto; 
-            color: #444;
-        }
-
-        /* --- Feature Cards --- */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-        .feature-card {
-            background: white;
-            border: 1px solid #e1e4e8;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .feature-card i {
-            font-size: 2em;
-            color: #0366d6;
-            margin-bottom: 15px;
-        }
-
         /* --- Video Grid Styling --- */
         .video-grid {
             display: grid;
@@ -113,7 +73,6 @@
             display: block;
             margin-bottom: 10px;
             font-size: 1.1em;
-            color: #24292e;
         }
         .video-wrapper {
             position: relative;
@@ -122,7 +81,6 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            background: #000;
         }
         .video-wrapper iframe {
             position: absolute;
@@ -133,104 +91,187 @@
             border: 0;
         }
 
-        /* --- Tags --- */
-        .tag {
-            display: inline-block;
-            background: #f1f8ff;
-            color: #0366d6;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            font-weight: 600;
-            margin-right: 5px;
-        }
+        .tech-image { width: 100%; max-width: 600px; display: block; margin: 20px auto; border-radius: 8px; } /* Removed from usage, but keeping style */
+        .bibtex-code { background-color: #f6f8fa; border: 1px solid #e1e4e8; border-radius: 6px; padding: 16px; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; } /* Removed from usage, but keeping style */
 
-        /* --- Footer --- */
-        .footer {
-            text-align: center;
-            margin-top: 80px;
-            padding: 40px;
-            background-color: #24292e;
-            color: white;
+        /* --- Sponsors Section Styling --- */
+        .sponsors-grid { /* Renamed to .acknowledgements-grid for clarity */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
         }
-        .footer p { opacity: 0.7; }
-
+        .sponsor-item a { /* Renamed to .acknowledgement-item */
+            display: block;
+        }
+        .sponsor-item img { /* Renamed to .acknowledgement-item img */
+            height: 80px; 
+            width: auto; 
+        }
     </style>
 </head>
 <body>
 
     <header class="project-header">
-        <h1>AIXR-Coach</h1>
-        <h2>Adaptive Extended Reality Training powered by Intelligent Systems</h2>
-        
+        <h1>AIXR-Coach: Adaptive XR Training for Industrial Excellence</h1>
         <div class="authors">
-            <span>Vivek Chavan</span> &bull;
-            <span>Frederik Saffner</span> &bull;
-            <span>Ansh</span> &bull;
-            <span>T</span> &bull;
-            <span>Ahsan</span>
+            Vivek Chavan, Frederik Saffner, Ansh, T, Ahsan
         </div>
-
+        <div class="notes">
+            A Hackathon Project
+        </div>
         <div class="links">
-            <a href="https://github.com/AIXR-Coach" class="button"><i class="fab fa-github"></i> View on GitHub</a>
-            <!-- Add demo link if available later -->
-            <!-- <a href="#" class="button"><i class="fas fa-play"></i> Try Demo</a> -->
+            <!-- IMPORTANT: Replace the YouTube link below with your actual demo video once available. 
+                 For now, it's a placeholder. You might also link to a GIF or image. -->
+            <a href="https://www.youtube.com/embed/ric5f6jH7AI?autoplay=1&loop=1&mute=1&playlist=ric5f6jH7AI" class="button" target="_blank"><i class="fas fa-play-circle"></i> Demo Video</a>
+            <a href="https://github.com/AIXR-Coach" class="button" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <!-- <a href="#" class="button"><i class="fas fa-envelope"></i> Contact Us</a> -->
         </div>
     </header>
 
     <main>
-        
+        <hr>
         <p class="intro-text">
-            Designing a cross-device <strong>XR training experience</strong> that uses AI to <strong>personalise human learning</strong> and includes multisensory feedback in real time, while predicting and optimising <strong>latency</strong> to keep immersion consistent.
+            Welcome to <strong>AIXR-Coach</strong>, your next-generation adaptive training system designed for <strong>industrial production</strong>. Leveraging cutting-edge AI and Extended Reality, we enhance safety, boost quality, and drive efficiency through truly personalized and immersive learning experiences.
         </p>
-        
         <hr>
 
         <section>
-            <h2>🏭 Industrial Application Scenarios</h2>
-            <p>Our adaptive training system is designed for industrial production to improve <strong>safety, quality, and efficiency</strong>. Below are examples of the types of workflows AIXR-Coach optimizes.</p>
-            
+            <h3>🎥 Industrial Training Scenarios</h3>
+            <p style="text-align: center; margin-bottom: 30px;">AIXR-Coach is built to revolutionize training across diverse industrial applications, from intricate assembly to large-scale logistics. Here are some examples of scenarios our system can adaptively train for:</p>
             <div class="video-grid">
                 <div class="video-container">
-                    <strong>Adaptive Assembly (Engine Production)</strong>
+                    <strong>Assembly/Disassembly</strong>
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/xvs_uFhwrvs?autoplay=0&mute=1&loop=1&playlist=xvs_uFhwrvs&controls=1" title="Assembly" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/xvs_uFhwrvs?autoplay=1&mute=1&loop=1&playlist=xvs_uFhwrvs&controls=0" title="Assembly Disassembly Training" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                    <p style="font-size: 0.9em; margin-top: 5px;">Complex, heavy machinery tasks requiring step-by-step verification.</p>
                 </div>
                 <div class="video-container">
-                    <strong>Precision Tasks (Hearing Aids)</strong>
+                    <strong>Inspection/Repair</strong>
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/UVzIk0A3OQ4?autoplay=0&mute=1&loop=1&playlist=UVzIk0A3OQ4&controls=1" title="Precision Work" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/yVn7pm8EPig?autoplay=1&mute=1&loop=1&playlist=yVn7pm8EPig&controls=0" title="Inspection Repair Training" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                    <p style="font-size: 0.9em; margin-top: 5px;">Fine motor skill training for smaller, delicate components.</p>
                 </div>
                 <div class="video-container">
-                    <strong>Safety & Inspection</strong>
+                    <strong>Logistics & Operations</strong>
                     <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/yVn7pm8EPig?autoplay=0&mute=1&loop=1&playlist=yVn7pm8EPig&controls=1" title="Inspection" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/Euxye9HInk4?autoplay=1&mute=1&loop=1&playlist=Euxye9HInk4&controls=0" title="Logistics Training" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                    <p style="font-size: 0.9em; margin-top: 5px;">Detecting fatigue and enforcing safety rules in real-time.</p>
+                </div>
+                <div class="video-container">
+                    <strong>Advanced Manufacturing</strong>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/UVzIk0A3OQ4?autoplay=1&mute=1&loop=1&playlist=UVzIk0A3OQ4&controls=0" title="Manufacturing Training" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <strong>Complex Procedure Training</strong>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/JPehcSF_tGc?autoplay=1&mute=1&loop=1&playlist=JPehcSF_tGc&controls=0" title="Complex Procedure Training" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <hr>
+
         <section>
-            <h2>🧠 Core Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Adaptive AI Personalisation</h3>
-                    <p>The system evolves with the worker. The <strong>1st run</strong> is different from the <strong>7th run</strong>.</p>
+            <h2>📘 About AIXR-Coach</h2>
+            <p>Traditional industrial training often falls short: it's generic, slow to adapt, and struggles to replicate real-world complexities. This leads to inefficiencies, increased risks, and a disconnect between theoretical knowledge and practical application. Current XR solutions frequently suffer from immersion-breaking latency and lack true personalization.</p>
+            <p><strong>AIXR-Coach</strong> revolutionizes this paradigm. We design a cross-device XR training experience that uses AI to personalise human learning and includes multisensory feedback in real time, while predicting and optimising latency to keep immersion consistent. Our system provides an adaptive training experience for critical industrial production tasks, from large-scale engine assembly to precision hearing aid manufacturing.</p>
+            <p>Our core objective is to improve **safety, quality, and efficiency** in industrial environments by offering a training platform that understands and adapts to each individual learner.</p>
+        </section>
+
+        <section>
+            <h2>✨ Core Features</h2>
+            <ul>
+                <li><strong>Adaptive Learning Journeys:</strong>
                     <ul>
-                        <li>Individual worker profiles based on experience.</li>
-                        <li>Live language translation.</li>
-                        <li>Incident history analysis to warn about specific risks.</li>
+                        <li>AI personalizes the experience based on individual worker profiles, past performance, and task history.</li>
+                        <li>The first training run is uniquely tailored, and the seventh run adapts based on prior sessions, ensuring continuous improvement.</li>
+                        <li>Incorporates worker language preferences with live translation capabilities.</li>
+                        <li>Awareness mechanisms identify critical process points, judged by past successes and incidents.</li>
                     </ul>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-glasses"></i>
-                    <h3>Multisensory XR</h3>
-                    <p>Beyond just vision. We utilize augmented information overlays combined with <strong>haptic feedback</strong> and spatial audio.</p>
+                </li>
+                <li><strong>Real-time Multisensory Feedback:</strong>
                     <ul>
-                        <li>Clear visual steps overlaid on reality.</li>
+                        <li>Augmented information is displayed directly in the worker's view (XR overlay).</li>
+                        <li>Haptic feedback guides precise movements and alerts.</li>
+                        <li>Spatial audio provides clear instructions, warnings, and environmental cues.</li>
+                        <li><strong>Safety-Critical Warnings:</strong> Immediate visual, haptic, and audio alerts for safety rule infringements or proximity to hazards.</li>
+                    </ul>
+                </li>
+                <li><strong>Seamless Cross-Device Immersion:</strong>
+                    <ul>
+                        <li>Supports diverse XR hardware (Meta Quest 3, Apple Vision Pro, AR glasses) with local on-device computation for low communication overhead.</li>
+                        <li>Enables <strong>shared virtual training sessions</strong> where multiple workers or a worker and supervisor can experience the same environment in real-time.</li>
+                        <li><strong>Remote Supervision:</strong> Supervisors can remotely "jump into" a worker's point-of-view, offering instant guidance or intervention, especially during safety-critical events. Workers can also request supervision.</li>
+                    </ul>
+                </li>
+                <li><strong>Predictive Latency Optimization:</strong>
+                    <ul>
+                        <li>Our AI predicts and actively optimizes latency across all devices to maintain a consistent and uninterrupted immersive experience.</li>
+                        <li>Leverages local computation on sophisticated AR devices to minimize communication delays.</li>
+                    </ul>
+                </li>
+                <li><strong>Scalable & Modular System:</strong>
+                    <ul>
+                        <li>Companies can easily integrate their own specific cases, scenarios, and training modules.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📊 The AIXR-Coach Dashboard</h2>
+            <p>Our intuitive dashboard provides comprehensive insights into training performance and operational safety:</p>
+            <ul>
+                <li><strong>Task Tracking:</strong> Monitor tasks in execution by worker and step, and view completed tasks.</li>
+                <li><strong>Safety & Incident Reporting:</strong> Track security incidents, warnings issued, and rule infringements.</li>
+                <li><strong>Performance Analytics:</strong> Plot key performance indicators (KPIs) over time, aiming to minimize incidents and optimize task completion time.</li>
+                <li>**(Future)** Facility Map: Visualize worker locations and active training zones within the facility.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>⚙️ Technology Behind AIXR-Coach</h2>
+            <p>AIXR-Coach is built on a robust technical foundation:</p>
+            <ul>
+                <li><strong>Advanced Data Pipeline:</strong> For efficient collection, curation, and anonymization of training data.</li>
+                <li><strong>Multimodal AI Functionality:</strong> Leveraging the latest in multimodal AI for personalization, prediction, and real-time adaptation.</li>
+                <li><strong>Adaptive Training & Development Modules:</strong> Modular components for dynamically generating and modifying training content.</li>
+                <li><strong>Cross-Platform XR Frameworks:</strong> Utilizing platforms like Unity or Unreal Engine for immersive experience development.</li>
+                <li><strong>Networking & Edge Computing:</strong> Optimized for low-latency communication and on-device computation to ensure seamless cross-device synchronization.</li>
+            </ul>
+            <!-- No tech-specific image from IndEgo needed here for AIXR-Coach -->
+        </section>
+
+        <section>
+            <h2>🎬 AIXR-Coach Concept Demo</h2>
+            <p style="text-align: center;">Experience a glimpse into the future of industrial training with AIXR-Coach. This concept video demonstrates how personalized, multisensory feedback and seamless immersion empower workers in complex environments.</p>
+            <div class="video-wrapper" style="max-width: 900px; margin: auto;">
+                 <!-- IMPORTANT: Replace the YouTube link below with your actual demo video once available. 
+                     For now, it's the IndEgo multimodality video as a placeholder. -->
+                 <iframe width="100%" height="500" src="https://www.youtube.com/embed/ric5f6jH7AI?autoplay=1&loop=1&mute=1&playlist=ric5f6jH7AI" title="AIXR-Coach Concept Demo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>🤝 Ethics & Inclusivity</h2>
+            <p>We are committed to developing AIXR-Coach responsibly, with a strong focus on ethical considerations and inclusivity:</p>
+            <ul>
+                <li><strong>Data Privacy:</strong> Implementing robust pseudonymization and anonymization pipelines. If recordings are kept, faces and sensitive information are blurred.</li>
+                <li><strong>Aggregated Metrics:</strong> Focusing on aggregated results and system improvements, avoiding personal worker metric "nightmares."</li>
+                <li><strong>Consent & Control:</strong> Supervisors can *request* access to a worker's POV, ensuring transparency and worker consent.</li>
+                <li><strong>Inclusivity by Design:</strong> Considering diverse user needs, including gender-neutral design, customizable color schemes for visual impairments, adjustable interaction weights, and support for various physical capabilities.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🚀 Our Product & Service Model</h2>
+            <p>AIXR-Coach offers flexible solutions to integrate advanced adaptive training into your operations:</p>
+            <ul>
+                <li><strong>Consulting & Bespoke Training:</strong> We provide expert consulting and conduct tailor-made training sessions for companies, ensuring optimal implementation and results.</li>
+                <li><strong>Framework for Self-Service:</strong> We offer a robust, modular framework that companies can license and use to build and manage their own traini
