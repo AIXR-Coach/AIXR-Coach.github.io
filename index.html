@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIXR-Coach | Adaptive Industrial Training</title>
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        /* --- General Page Styling --- */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            color: #24292e;
+            line-height: 1.6;
+            background-color: #fcfcfc;
+        }
+
+        /* --- Header Styling --- */
+        .project-header {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #ffffff, #f6f8fa);
+            border-bottom: 1px solid #e1e4e8;
+        }
+        .project-header h1 { font-size: 2.8em; font-weight: 700; margin-bottom: 10px; line-height: 1.2; color: #0366d6; }
+        .project-header h2 { font-size: 1.5em; font-weight: 400; color: #586069; margin-top: 0; border: none; }
+        
+        .project-header .authors { font-size: 1.2em; line-height: 1.6; margin-top: 20px; }
+        .project-header .authors span { color: #24292e; font-weight: 600; margin: 0 8px; }
+        
+        .project-header .links { margin-top: 30px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .project-header .button { display: inline-block; padding: 12px 24px; background-color: #24292e; color: white; font-size: 1em; font-weight: 600; text-decoration: none; border-radius: 6px; transition: background-color 0.2s ease-in-out; }
+        .project-header .button:hover { background-color: #0366d6; }
+        .project-header .button i { margin-right: 8px; }
+
+        /* --- Main Content Styling --- */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        h2 {
+            font-weight: 600;
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            font-size: 2em;
+            color: #24292e;
+        }
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #0366d6;
+        }
+        h4 {
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        hr { border: 0; height: 1px; background-color: #e1e4e8; margin: 50px 0; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        
+        .intro-text { 
+            text-align: center; 
+            font-size: 1.3em; 
+            margin-bottom: 40px; 
+            max-width: 900px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            color: #444;
+        }
+
+        /* --- Feature Cards --- */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .feature-card {
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .feature-card i {
+            font-size: 2em;
+            color: #0366d6;
+            margin-bottom: 15px;
+        }
+
+        /* --- Video Grid Styling --- */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        .video-container {
+            text-align: center;
+        }
+        .video-container strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #24292e;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* --- Tags --- */
+        .tag {
+            display: inline-block;
+            background: #f1f8ff;
+            color: #0366d6;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding: 40px;
+            background-color: #24292e;
+            color: white;
+        }
+        .footer p { opacity: 0.7; }
+
+    </style>
+</head>
+<body>
+
+    <header class="project-header">
+        <h1>AIXR-Coach</h1>
+        <h2>Adaptive Extended Reality Training powered by Intelligent Systems</h2>
+        
+        <div class="authors">
+            <span>Vivek Chavan</span> &bull;
+            <span>Frederik Saffner</span> &bull;
+            <span>Ansh</span> &bull;
+            <span>T</span> &bull;
+            <span>Ahsan</span>
+        </div>
+
+        <div class="links">
+            <a href="https://github.com/AIXR-Coach" class="button"><i class="fab fa-github"></i> View on GitHub</a>
+            <!-- Add demo link if available later -->
+            <!-- <a href="#" class="button"><i class="fas fa-play"></i> Try Demo</a> -->
+        </div>
+    </header>
+
+    <main>
+        
+        <p class="intro-text">
+            Designing a cross-device <strong>XR training experience</strong> that uses AI to <strong>personalise human learning</strong> and includes multisensory feedback in real time, while predicting and optimising <strong>latency</strong> to keep immersion consistent.
+        </p>
+        
+        <hr>
+
+        <section>
+            <h2>🏭 Industrial Application Scenarios</h2>
+            <p>Our adaptive training system is designed for industrial production to improve <strong>safety, quality, and efficiency</strong>. Below are examples of the types of workflows AIXR-Coach optimizes.</p>
+            
+            <div class="video-grid">
+                <div class="video-container">
+                    <strong>Adaptive Assembly (Engine Production)</strong>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/xvs_uFhwrvs?autoplay=0&mute=1&loop=1&playlist=xvs_uFhwrvs&controls=1" title="Assembly" allowfullscreen></iframe>
+                    </div>
+                    <p style="font-size: 0.9em; margin-top: 5px;">Complex, heavy machinery tasks requiring step-by-step verification.</p>
+                </div>
+                <div class="video-container">
+                    <strong>Precision Tasks (Hearing Aids)</strong>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/UVzIk0A3OQ4?autoplay=0&mute=1&loop=1&playlist=UVzIk0A3OQ4&controls=1" title="Precision Work" allowfullscreen></iframe>
+                    </div>
+                    <p style="font-size: 0.9em; margin-top: 5px;">Fine motor skill training for smaller, delicate components.</p>
+                </div>
+                <div class="video-container">
+                    <strong>Safety & Inspection</strong>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/yVn7pm8EPig?autoplay=0&mute=1&loop=1&playlist=yVn7pm8EPig&controls=1" title="Inspection" allowfullscreen></iframe>
+                    </div>
+                    <p style="font-size: 0.9em; margin-top: 5px;">Detecting fatigue and enforcing safety rules in real-time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🧠 Core Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Adaptive AI Personalisation</h3>
+                    <p>The system evolves with the worker. The <strong>1st run</strong> is different from the <strong>7th run</strong>.</p>
+                    <ul>
+                        <li>Individual worker profiles based on experience.</li>
+                        <li>Live language translation.</li>
+                        <li>Incident history analysis to warn about specific risks.</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-glasses"></i>
+                    <h3>Multisensory XR</h3>
+                    <p>Beyond just vision. We utilize augmented information overlays combined with <strong>haptic feedback</strong> and spatial audio.</p>
+                    <ul>
+                        <li>Clear visual steps overlaid on reality.</li>
